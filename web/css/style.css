@@ -1,0 +1,143 @@
+/* ArchCraft Web Interface Styles */
+
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.jumbotron {
+    background-color: #f5f5f5;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Dashboard Cards */
+.card {
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    margin-bottom: 1.5rem;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+.card h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 0.5rem;
+}
+
+/* Feature Cards */
+.feature-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: 100%;
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.feature-icon {
+    width: 3rem;
+    height: 3rem;
+    color: #007bff;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #343a40;
+}
+
+.feature-card p {
+    color: #6c757d;
+}
+
+/* Server Status */
+.server-status-card {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Styles */
+.table {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.table thead {
+    background-color: #f8f9fa;
+}
+
+.table th {
+    border-top: none;
+    font-weight: 600;
+}
+
+/* Social Icons */
+.social-icons a {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff !important;
+}
+
+/* Button Styles */
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0069d9;
+    border-color: #0062cc;
+}
+
+/* Navbar Customization */
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .feature-card {
+        margin-bottom: 1.5rem;
+    }
+    
+    .jumbotron h1 {
+        font-size: 2rem;
+    }
+}

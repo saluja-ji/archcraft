@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArchCraft - Professional Architecture in Minecraft</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/feather-icons@4.29.0/dist/feather.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <i data-feather="home"></i> ArchCraft
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#users">Users</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#server">Server</a>
+                    </li>
+                </ul>
+                <span class="navbar-text">
+                    <button class="btn btn-outline-light" id="loginBtn">Login</button>
+                </span>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <div class="jumbotron">
+            <h1 class="display-4">ArchCraft</h1>
+            <p class="lead">Professional Architecture & Urban Planning Platform in Minecraft</p>
+            <hr class="my-4">
+            <p>ArchCraft transforms Minecraft into a powerful collaborative design tool for architects, urban planners, and civil engineers.</p>
+            <a class="btn btn-primary btn-lg" href="#features" role="button">Learn More</a>
+        </div>
+
+        <div class="row mt-5" id="dashboard">
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i data-feather="layers"></i> Projects</h5>
+                        <h2 class="card-text" id="projectCount">0</h2>
+                        <p>Active architectural projects</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i data-feather="map"></i> Zones</h5>
+                        <h2 class="card-text" id="zoneCount">0</h2>
+                        <p>Urban planning zones created</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title"><i data-feather="users"></i> Users</h5>
+                        <h2 class="card-text" id="userCount">0</h2>
+                        <p>Registered professionals</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="features">
+            <div class="col-12">
+                <h2 class="text-center mb-4">Professional Features</h2>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i data-feather="ruler" class="feature-icon"></i>
+                    <h3>Precision Measurement</h3>
+                    <p>Accurate measuring tools with real-world scale options. Convert Minecraft blocks to meters or feet for professional applications.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i data-feather="grid" class="feature-icon"></i>
+                    <h3>Urban Zoning</h3>
+                    <p>Define and visualize different zones for urban planning. Residential, commercial, industrial, and more zone types available.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="feature-card">
+                    <i data-feather="users" class="feature-icon"></i>
+                    <h3>Collaborative Design</h3>
+                    <p>Invite colleagues to collaborate on projects. Team-based permissions and real-time collaboration features.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="projects">
+            <div class="col-12 d-flex justify-content-between align-items-center">
+                <h2>Projects</h2>
+                <button class="btn btn-primary" id="newProjectBtn">New Project</button>
+            </div>
+            <div class="col-12 mt-3">
+                <div class="table-responsive">
+                    <table class="table" id="projectsTable">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Owner</th>
+                                <th>Created</th>
+                                <th>Scale</th>
+                                <th>Team Size</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="6" class="text-center">Loading projects...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="users">
+            <div class="col-12 d-flex justify-content-between align-items-center">
+                <h2>Users</h2>
+                <button class="btn btn-primary" id="manageUsersBtn">Manage Users</button>
+            </div>
+            <div class="col-12 mt-3">
+                <div class="table-responsive">
+                    <table class="table" id="usersTable">
+                        <thead>
+                            <tr>
+                                <th>Username</th>
+                                <th>Role</th>
+                                <th>Projects</th>
+                                <th>Last Active</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="text-center">Loading users...</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5" id="server">
+            <div class="col-12">
+                <h2>Server Status</h2>
+                <div class="server-status-card">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h4><i data-feather="server"></i> Server Information</h4>
+                            <p><strong>Status:</strong> <span class="badge bg-success" id="serverStatus">Online</span></p>
+                            <p><strong>Address:</strong> <span id="serverAddress">play.archcraft.example.com</span></p>
+                            <p><strong>Version:</strong> <span id="serverVersion">Paper 1.16.5</span></p>
+                            <p><strong>Uptime:</strong> <span id="serverUptime">2 days, 5 hours</span></p>
+                        </div>
+                        <div class="col-md-6">
+                            <h4><i data-feather="activity"></i> Performance</h4>
+                            <p><strong>Memory Usage:</strong> <span id="memoryUsage">2.5GB / 4GB</span></p>
+                            <p><strong>TPS:</strong> <span id="serverTPS">20.0</span></p>
+                            <p><strong>Online Players:</strong> <span id="onlinePlayers">0 / 20</span></p>
+                            <p><strong>Loaded Worlds:</strong> <span id="loadedWorlds">3</span></p>
+                        </div>
+                    </div>
+                    <div class="row mt-3">
+                        <div class="col-12">
+                            <h4><i data-feather="settings"></i> Controls</h4>
+                            <button class="btn btn-warning" id="restartBtn">Restart Server</button>
+                            <button class="btn btn-danger" id="stopBtn">Stop Server</button>
+                            <button class="btn btn-primary" id="backupBtn">Create Backup</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-dark text-white mt-5 py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>ArchCraft</h5>
+                    <p>Professional Architecture & Urban Planning Platform in Minecraft</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">Home</a></li>
+                        <li><a href="/docs/user_guide.md" class="text-white">Documentation</a></li>
+                        <li><a href="#" class="text-white">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Connect</h5>
+                    <div class="social-icons">
+                        <a href="#" class="text-white me-2"><i data-feather="github"></i></a>
+                        <a href="#" class="text-white me-2"><i data-feather="twitter"></i></a>
+                        <a href="#" class="text-white me-2"><i data-feather="youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2023 ArchCraft. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal for New Project -->
+    <div class="modal fade" id="newProjectModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Create New Project</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="newProjectForm">
+                        <div class="mb-3">
+                            <label for="projectName" class="form-label">Project Name</label>
+                            <input type="text" class="form-control" id="projectName" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectScale" class="form-label">Scale (1 block = X meters)</label>
+                            <input type="number" class="form-control" id="projectScale" value="1" min="0.1" step="0.1" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="projectDescription" class="form-label">Description</label>
+                            <textarea class="form-control" id="projectDescription" rows="3"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label for="worldType" class="form-label">World Type</label>
+                            <select class="form-select" id="worldType">
+                                <option value="flat">Flat</option>
+                                <option value="normal">Normal</option>
+                                <option value="void">Void</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                    <button type="button" class="btn btn-primary" id="createProjectBtn">Create Project</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/feather-icons@4.29.0/dist/feather.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/projects.js"></script>
+    <script src="js/users.js"></script>
+</body>
+</html>

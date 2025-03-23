@@ -1,0 +1,52 @@
+name: ArchTools
+version: 1.0.0
+main: com.archcraft.Main
+api-version: 1.16
+description: Professional architecture and urban planning tools for Minecraft
+authors: [ArchCraft]
+website: https://archcraft.example.com
+commands:
+  measure:
+    description: Measure distance between two points
+    usage: /measure
+    permission: archtools.measure
+  scale:
+    description: Set or get the current scale (1 block = X meters)
+    usage: /scale [value]
+    permission: archtools.scale
+  zone:
+    description: Create or modify zones
+    usage: /zone <create|modify|delete> [name] [type]
+    permission: archtools.zone
+  project:
+    description: Manage architecture projects
+    usage: /project <create|load|save|list|info> [name]
+    permission: archtools.project
+  team:
+    description: Manage project teams
+    usage: /team <create|invite|kick|list> [player] [project]
+    permission: archtools.team
+permissions:
+  archtools.*:
+    description: Gives access to all ArchTools commands
+    children:
+      archtools.measure: true
+      archtools.scale: true
+      archtools.zone: true
+      archtools.project: true
+      archtools.team: true
+  archtools.measure:
+    description: Allows measuring distances
+    default: true
+  archtools.scale:
+    description: Allows setting and getting the scale
+    default: true
+  archtools.zone:
+    description: Allows zone management
+    default: op
+  archtools.project:
+    description: Allows project management
+    default: true
+  archtools.team:
+    description: Allows team management
+    default: op

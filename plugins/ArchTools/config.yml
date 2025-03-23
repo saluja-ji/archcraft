@@ -1,0 +1,57 @@
+# ArchTools Configuration
+# Professional architecture and urban planning tools for Minecraft
+
+# Scale setting (1 block = X meters)
+scale: 1.0
+
+# Whether to visualize zones with particles/temporary blocks
+visualize-zones: true
+
+# Whether to reset measurement points after completing a measurement
+reset-after-measurement: false
+
+# Backup interval in minutes (0 to disable)
+backup-interval: 30
+
+# Measurement settings
+measurement:
+  # Default unit for display (meters, feet)
+  default-unit: meters
+  # Show volume calculations
+  show-volume: true
+  # Show area calculations
+  show-area: true
+  # Show height difference
+  show-height: true
+
+# Zoning settings
+zoning:
+  # Available zone types
+  types:
+    - residential
+    - commercial
+    - industrial
+    - recreational
+    - educational
+    - transportation
+    - agricultural
+    - mixed
+  # Colors for different zone types (wool/concrete colors)
+  colors:
+    residential: GREEN
+    commercial: BLUE
+    industrial: YELLOW
+    recreational: LIME
+    educational: LIGHT_BLUE
+    transportation: GRAY
+    agricultural: BROWN
+    mixed: MAGENTA
+
+# Project settings
+project:
+  # Max projects per player (0 for unlimited)
+  max-per-player: 0
+  # Allow public projects
+  allow-public-projects: false
+  # Auto-save interval in minutes (0 to disable)
+  auto-save: 5
