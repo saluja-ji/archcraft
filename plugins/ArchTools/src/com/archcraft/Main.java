@@ -1,6 +1,9 @@
 package com.archcraft;
 
 import com.archcraft.commands.*;
+import com.archcraft.io.ModelManager;
+import com.archcraft.io.obj.ObjExporter;
+import com.archcraft.io.obj.ObjImporter;
 import com.archcraft.listeners.PlayerInteractListener;
 import com.archcraft.utils.ConfigManager;
 import com.archcraft.utils.DatabaseManager;
@@ -20,6 +23,7 @@ public class Main extends JavaPlugin {
     private static Main instance;
     private ConfigManager configManager;
     private DatabaseManager databaseManager;
+    private ModelManager modelManager;
     private Logger logger;
     
     @Override
@@ -34,6 +38,9 @@ public class Main extends JavaPlugin {
         // Initialize database
         databaseManager = new DatabaseManager(this);
         
+        // Initialize model manager and register formats
+        initializeModelManager();
+        
         // Register commands
         registerCommands();
         
@@ -42,6 +49,19 @@ public class Main extends JavaPlugin {
         
         logger.info(ChatColor.GREEN + "ArchTools has been enabled!");
         logger.info(ChatColor.AQUA + "ArchCraft - Professional Architecture & Urban Planning Server");
+    }
+    
+    /**
+     * Initialize the model manager and register model formats
+     */
+    private void initializeModelManager() {
+        modelManager = new ModelManager(this);
+        
+        // Register model importers and exporters
+        modelManager.registerImporter(new ObjImporter(logger));
+        modelManager.registerExporter(new ObjExporter());
+        
+        logger.info("Registered model import/export handlers");
     }
     
     @Override
@@ -94,5 +114,13 @@ public class Main extends JavaPlugin {
      */
     public DatabaseManager getDatabaseManager() {
         return databaseManager;
+    }
+    
+    /**
+     * Get the model manager
+     * @return ModelManager instance
+     */
+    public ModelManager getModelManager() {
+        return modelManager;
     }
 }

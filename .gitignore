@@ -1,0 +1,35 @@
+# Logs
+logs/
+
+# Backups
+backups/
+
+# Build files
+target/
+build/
+*.class
+
+# Server data files
+server/world/
+server/world_nether/
+server/world_the_end/
+server/plugins/*/data/
+
+# Environment variables and secrets
+.env
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+
+# Temporary files
+*.tmp
+*.bak
+*~
+
+# Minecraft server files that should be excluded
+server/logs/
+server/crash-reports/
+server/libraries/
+*.jar
